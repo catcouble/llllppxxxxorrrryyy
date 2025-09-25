@@ -13,6 +13,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 4. 复制你的代理服务器代码
 COPY proxy_server.py .
 
+# 4.1 创建 static 目录
+RUN mkdir -p /app/static
+
 # 5. 暴露你的应用运行的端口 (根据你的代码是 9080)
 EXPOSE 9080
 
